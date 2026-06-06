@@ -1,0 +1,150 @@
+.projects {
+  background-color: #f5f5f0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6c63ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #111111;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: #6c63ff;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #555555;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0d8;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: #6c63ff;
+}
+
+.cardTop {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.cardNum {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  opacity: 0.4;
+}
+
+.cardBody {
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  color: #111111;
+  font-weight: 700;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag {
+  background: #f5f5f0;
+  border: 1px solid #e0e0d8;
+  color: #555555;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.cardFooter {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0d8;
+  display: flex;
+  gap: 16px;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555555;
+  transition: all 0.3s ease;
+}
+
+.linkBtn:hover {
+  color: #6c63ff;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

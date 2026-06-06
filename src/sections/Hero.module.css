@@ -1,0 +1,234 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(192, 192, 200, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.content {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #efefef;
+  border: 1px solid #e2e2e2;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  color: #666666;
+  width: fit-content;
+}
+
+.heading {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  color: #111111;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.accent {
+  background: linear-gradient(135deg, #a0a0b8, #606080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  font-size: 1.05rem;
+  color: #666666;
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #c0c0c8 0%, #8a8a9a 100%);
+  color: white;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 4px 15px rgba(138, 138, 154, 0.3);
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(135deg, #a8a8b8 0%, #707088 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(138, 138, 154, 0.4);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #111111;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid #e2e2e2;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btnSecondary:hover {
+  border-color: #c0c0c8;
+  color: #8a8a9a;
+  transform: translateY(-2px);
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  color: #666666;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  color: #8a8a9a;
+  transform: translateY(-2px);
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+}
+
+.avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+  background: linear-gradient(135deg, #e8e8f0 0%, #c0c0c8 40%, #ffffff 60%, #a8a8b8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #666666;
+  position: relative;
+  z-index: 1;
+  animation: morph 8s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(192, 192, 200, 0.4), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.ring {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+  border: 1px solid #c0c0c8;
+  animation: morph 8s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.ring2 {
+  position: absolute;
+  top: -32px;
+  left: -32px;
+  right: -32px;
+  bottom: -32px;
+  border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+  border: 1px dashed #c0c0c8;
+  opacity: 0.5;
+  animation: morph 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%; }
+  25%       { border-radius: 55% 45% 40% 60% / 55% 45% 55% 45%; }
+  50%       { border-radius: 50% 50% 60% 40% / 40% 60% 45% 55%; }
+  75%       { border-radius: 45% 55% 45% 55% / 60% 40% 60% 40%; }
+}
+
+.scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666666;
+  display: flex;
+  align-items: center;
+  animation: bounce 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.scroll:hover {
+  color: #8a8a9a;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .badge, .buttons, .socials {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .sub {
+    margin: 0 auto;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+  }
+}

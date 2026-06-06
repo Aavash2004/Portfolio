@@ -1,0 +1,46 @@
+.footer {
+  background: #111111;
+  padding: 40px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.links a {
+  font-size: 0.85rem;
+  color: #555555;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #6c63ff;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

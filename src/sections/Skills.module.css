@@ -1,0 +1,138 @@
+.skills {
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6c63ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #111111;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: #6c63ff;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #555555;
+  max-width: 400px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.colTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0d8;
+}
+
+/* Bars */
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111111;
+}
+
+.skillLevel {
+  font-size: 0.8rem;
+  color: #555555;
+}
+
+.barTrack {
+  height: 6px;
+  background: #e0e0d8;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s ease;
+}
+
+/* Tools */
+.toolsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tool {
+  background: #f5f5f0;
+  border: 1px solid #e0e0d8;
+  color: #111111;
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tool:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+  background: #f0effe;
+}
+
+.currently {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
