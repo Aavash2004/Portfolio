@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
 
 :root {
-  --bg: #d0d0d8;
-  --bg-secondary: #c0c0ca;
-  --text-primary: #111111;
-  --text-secondary: #444444;
-  --accent: #cc2200;
-  --accent-hover: #aa1a00;
-  --card-bg: #dcdce4;
-  --border: #b0b0ba;
-  --silver: #c0c0c8;
-  --shine: linear-gradient(135deg, #e8e8f0 0%, #c0c0c8 40%, #ffffff 60%, #a8a8b8 100%);
+  --bg: #111111;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #888888;
+  --accent: #0066ff;
+  --accent-hover: #0052cc;
+  --border: #2a2a2a;
+  --border-light: #333333;
 
   --font-body: 'DM Sans', sans-serif;
   --font-heading: 'Syne', sans-serif;
@@ -19,30 +18,20 @@
   --container-width: 1100px;
   --transition: all 0.3s ease;
 
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.18);
-}
-
-[data-theme='dark'] {
-  --bg: #1a1a1a;
-  --bg-secondary: #222222;
-  --text-primary: #e8e8f0;
-  --text-secondary: #888888;
-  --accent: #ff3311;
-  --accent-hover: #cc2200;
-  --card-bg: #222222;
-  --border: #333333;
-  --silver: #707070;
-  --shine: linear-gradient(135deg, #2a2a2a 0%, #505050 40%, #808080 60%, #404040 100%);
-
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 12px 40px rgba(0, 102, 255, 0.2);
+  --glow: 0 0 20px rgba(0, 102, 255, 0.3);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
+}
+
+a, button {
+  cursor: none;
 }
 
 html {
@@ -51,9 +40,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg);
+  background-color: #111111;
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
 }
 
@@ -83,19 +71,19 @@ section {
 }
 
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: #0066ff;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: #111111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 3px;
+  background: #0066ff;
+  border-radius: 4px;
 }

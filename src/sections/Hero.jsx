@@ -1,7 +1,14 @@
 ﻿import styles from "./Hero.module.css";
 import { ArrowDown, Mail, Code, ExternalLink } from "lucide-react";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 export default function Hero() {
+  const typed = useTypewriter(
+    ["Frontend Developer", "React Enthusiast", "UI/UX Lover", "Problem Solver"],
+    100,
+    2000
+  );
+
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
@@ -11,10 +18,13 @@ export default function Hero() {
 
           <h1 className={styles.heading}>
             Hi, I am{" "}
-            <span className={styles.accent}>Your Name</span>
-            <br />
-            Frontend Developer
+            <span className={styles.accent}>Aavash Basnet</span>
           </h1>
+
+          <h2 className={styles.typewriter}>
+            <span className={styles.typed}>{typed}</span>
+            <span className={styles.cursor}>|</span>
+          </h2>
 
           <p className={styles.sub}>
             I build clean, fast, and beautiful web experiences.
@@ -27,13 +37,13 @@ export default function Hero() {
           </div>
 
           <div className={styles.socials}>
-            <a href="https://github.com" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Aavash2004" target="_blank" rel="noreferrer">
               <Code size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <ExternalLink size={20} />
             </a>
-            <a href="mailto:you@email.com">
+            <a href="mailto:aavashbasnet.079@kathford.edu.np">
               <Mail size={20} />
             </a>
           </div>
@@ -41,7 +51,7 @@ export default function Hero() {
 
         <div className={styles.avatarWrap}>
           <div className={styles.avatar}>
-            <span>YN</span>
+            <img src="/me.jpeg" alt="Aavash Basnet" />
           </div>
           <div className={styles.ring} />
           <div className={styles.ring2} />

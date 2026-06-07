@@ -5,17 +5,28 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background-color: #f8f8f8;
+  background: #111111;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(192, 192, 200, 0.15) 0%, transparent 70%);
+  top: -300px;
+  right: -300px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -41,33 +52,68 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #efefef;
-  border: 1px solid #e2e2e2;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.3);
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 0.85rem;
-  color: #666666;
+  color: #0066ff;
   width: fit-content;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background: #0066ff;
+  border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
 .heading {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  color: #111111;
+  color: #f0f0f0;
   letter-spacing: -1.5px;
   line-height: 1.1;
 }
 
 .accent {
-  background: linear-gradient(135deg, #a0a0b8, #606080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #0066ff;
+}
+
+.typewriter {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #888888;
+}
+
+.typed {
+  color: #f0f0f0;
+}
+
+.cursor {
+  color: #0066ff;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .sub {
-  font-size: 1.05rem;
-  color: #666666;
-  line-height: 1.7;
+  font-size: 1rem;
+  color: #888888;
+  line-height: 1.8;
   max-width: 460px;
 }
 
@@ -78,7 +124,7 @@
 }
 
 .btnPrimary {
-  background: linear-gradient(135deg, #c0c0c8 0%, #8a8a9a 100%);
+  background: #0066ff;
   color: white;
   padding: 13px 28px;
   border-radius: 10px;
@@ -86,30 +132,30 @@
   font-weight: 500;
   transition: all 0.3s ease;
   font-family: inherit;
-  box-shadow: 0 4px 15px rgba(138, 138, 154, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
 }
 
 .btnPrimary:hover {
-  background: linear-gradient(135deg, #a8a8b8 0%, #707088 100%);
+  background: #0052cc;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(138, 138, 154, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
 }
 
 .btnSecondary {
   background: transparent;
-  color: #111111;
+  color: #f0f0f0;
   padding: 13px 28px;
   border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 500;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
   font-family: inherit;
 }
 
 .btnSecondary:hover {
-  border-color: #c0c0c8;
-  color: #8a8a9a;
+  border-color: #0066ff;
+  color: #0066ff;
   transform: translateY(-2px);
 }
 
@@ -119,7 +165,7 @@
 }
 
 .socials a {
-  color: #666666;
+  color: #888888;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -128,32 +174,32 @@
 }
 
 .socials a:hover {
-  color: #8a8a9a;
+  color: #0066ff;
   transform: translateY(-2px);
 }
 
 .avatarWrap {
   position: relative;
   flex-shrink: 0;
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
 }
 
 .avatar {
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
-  background: linear-gradient(135deg, #e8e8f0 0%, #c0c0c8 40%, #ffffff 60%, #a8a8b8 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #666666;
+  overflow: hidden;
   position: relative;
   z-index: 1;
-  animation: morph 8s ease-in-out infinite;
-  box-shadow: 0 8px 32px rgba(192, 192, 200, 0.4), inset 0 1px 0 rgba(255,255,255,0.8);
+  animation: morph 8s ease-in-out infinite, float 4s ease-in-out infinite;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 102, 255, 0.15);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ring {
@@ -163,8 +209,8 @@
   right: -16px;
   bottom: -16px;
   border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
-  border: 1px solid #c0c0c8;
-  animation: morph 8s ease-in-out infinite;
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  animation: morph 8s ease-in-out infinite, rotateBorder 6s linear infinite;
   animation-delay: 0.5s;
 }
 
@@ -175,9 +221,8 @@
   right: -32px;
   bottom: -32px;
   border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
-  border: 1px dashed #c0c0c8;
-  opacity: 0.5;
-  animation: morph 8s ease-in-out infinite;
+  border: 1px dashed rgba(0, 102, 255, 0.15);
+  animation: morph 8s ease-in-out infinite, rotateBorder 10s linear infinite reverse;
   animation-delay: 1s;
 }
 
@@ -188,21 +233,30 @@
   75%       { border-radius: 45% 55% 45% 55% / 60% 40% 60% 40%; }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 .scroll {
   position: absolute;
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  color: #666666;
+  color: #888888;
   display: flex;
   align-items: center;
   animation: bounce 2s ease-in-out infinite;
   transition: all 0.3s ease;
-  font-size: 1.2rem;
 }
 
 .scroll:hover {
-  color: #8a8a9a;
+  color: #0066ff;
 }
 
 @keyframes bounce {
@@ -222,13 +276,10 @@
     justify-content: center;
   }
 
-  .sub {
-    margin: 0 auto;
-  }
+  .sub { margin: 0 auto; }
 
-  .avatar {
-    width: 200px;
-    height: 200px;
-    font-size: 2rem;
+  .avatar, .avatarWrap {
+    width: 240px;
+    height: 240px;
   }
 }

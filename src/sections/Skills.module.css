@@ -1,5 +1,5 @@
 .skills {
-  background-color: #ffffff;
+  background: #1a1a1a;
 }
 
 .header {
@@ -14,24 +14,24 @@
 .label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #6c63ff;
+  color: #0066ff;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .heading {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  color: #111111;
+  color: #f0f0f0;
   letter-spacing: -1px;
 }
 
 .accent {
-  color: #6c63ff;
+  color: #0066ff;
 }
 
 .sub {
   font-size: 1rem;
-  color: #555555;
+  color: #888888;
   max-width: 400px;
 }
 
@@ -45,13 +45,12 @@
 .colTitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #111111;
+  color: #f0f0f0;
   margin-bottom: 24px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e0e0d8;
+  border-bottom: 1px solid #2a2a2a;
 }
 
-/* Bars */
 .bars {
   display: flex;
   flex-direction: column;
@@ -73,17 +72,17 @@
 .skillName {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #111111;
+  color: #f0f0f0;
 }
 
 .skillLevel {
   font-size: 0.8rem;
-  color: #555555;
+  color: #888888;
 }
 
 .barTrack {
-  height: 6px;
-  background: #e0e0d8;
+  height: 4px;
+  background: #2a2a2a;
   border-radius: 100px;
   overflow: hidden;
 }
@@ -94,7 +93,6 @@
   transition: width 1s ease;
 }
 
-/* Tools */
 .toolsWrap {
   display: flex;
   flex-direction: column;
@@ -108,9 +106,9 @@
 }
 
 .tool {
-  background: #f5f5f0;
-  border: 1px solid #e0e0d8;
-  color: #111111;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2a2a;
+  color: #888888;
   padding: 8px 18px;
   border-radius: 100px;
   font-size: 0.875rem;
@@ -120,9 +118,9 @@
 }
 
 .tool:hover {
-  border-color: #6c63ff;
-  color: #6c63ff;
-  background: #f0effe;
+  border-color: #0066ff;
+  color: #0066ff;
+  background: rgba(0, 102, 255, 0.05);
 }
 
 .currently {
@@ -131,8 +129,5 @@
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+  .grid { grid-template-columns: 1fr; gap: 40px; }
 }

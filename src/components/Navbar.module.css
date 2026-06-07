@@ -5,14 +5,15 @@
   right: 0;
   z-index: 100;
   padding: 20px 0;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .nav.scrolled {
-  background: var(--bg);
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .inner {
@@ -24,8 +25,12 @@
 .logo {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  color: var(--text-primary);
+  color: #f0f0f0;
   letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #0066ff;
 }
 
 .links {
@@ -37,13 +42,13 @@
 .links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-secondary);
-  transition: var(--transition);
+  color: #888888;
+  transition: all 0.3s ease;
   letter-spacing: 0.3px;
 }
 
 .links a:hover {
-  color: var(--accent);
+  color: #f0f0f0;
 }
 
 .actions {
@@ -54,33 +59,31 @@
 
 .themeBtn {
   background: none;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
+  border: 1px solid #2a2a2a;
+  color: #888888;
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .themeBtn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: #0066ff;
+  color: #0066ff;
 }
 
 .menuBtn {
   display: none;
   background: none;
   border: none;
-  color: var(--text-primary);
+  color: #f0f0f0;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .menuBtn {
-    display: flex;
-  }
+  .menuBtn { display: flex; }
 
   .links {
     display: none;
@@ -88,14 +91,12 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: #111111;
     flex-direction: column;
     padding: 20px 24px;
     gap: 20px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #2a2a2a;
   }
 
-  .links.open {
-    display: flex;
-  }
+  .links.open { display: flex; }
 }

@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.logo}>YourName</span>
+        <span className={styles.logo}>Aavash Basnet</span>
         <p className={styles.copy}>
-          {year} Designed and built by YourName
+          {year} Designed and built by AB
         </p>
         <div className={styles.links}>
           <a href="#about">About</a>

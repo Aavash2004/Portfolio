@@ -1,5 +1,6 @@
 import styles from "./Projects.module.css";
 import { ExternalLink, Code } from "lucide-react";
+import ScrollReveal from "../components/ScrollReveal";
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     tags: ["React", "CSS Modules", "Vite"],
     live: "#",
     code: "#",
-    color: "#6c63ff",
+    color: "BLUE_ACCENT",
   },
   {
     id: 2,
@@ -35,36 +36,41 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.projects}>
       <div className="container">
-        <div className={styles.header}>
-          <span className={styles.label}>My Work</span>
-          <h2 className={styles.heading}>Featured <span className={styles.accent}>Projects</span></h2>
-          <p className={styles.sub}>A selection of projects I have built while learning and growing as a frontend developer.</p>
-        </div>
+        <ScrollReveal>
+          <div className={styles.header}>
+            <span className={styles.label}>My Work</span>
+            <h2 className={styles.heading}>Featured <span className={styles.accent}>Projects</span></h2>
+            <p className={styles.sub}>A selection of projects I have built while learning and growing as a frontend developer.</p>
+          </div>
+        </ScrollReveal>
+
         <div className={styles.grid}>
-          {projects.map((project) => (
-            <div key={project.id} className={styles.card}>
-              <div className={styles.cardTop} style={{ background: project.color + "15" }}>
-                <div className={styles.cardDot} style={{ background: project.color }} />
-                <span className={styles.cardNum} style={{ color: project.color }}>0{project.id}</span>
-              </div>
-              <div className={styles.cardBody}>
-                <h3 className={styles.cardTitle}>{project.title}</h3>
-                <p className={styles.cardDesc}>{project.description}</p>
-                <div className={styles.tags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={styles.tag}>{tag}</span>
-                  ))}
+          {projects.map((project, i) => (
+            <ScrollReveal key={project.id} delay={i * 0.15}>
+              <div className={styles.card}>
+                <div className={styles.cardTop} style={{ background: project.color + "15" }}>
+                  <div className={styles.cardDot} style={{ background: project.color }} />
+                  <span className={styles.cardNum} style={{ color: project.color }}>0{project.id}</span>
+                </div>
+                <div className={styles.cardBody}>
+                  <h3 className={styles.cardTitle}>{project.title}</h3>
+                  <p className={styles.cardDesc}>{project.description}</p>
+                  <div className={styles.tags}>
+                    {project.tags.map((tag) => (
+                      <span key={tag} className={styles.tag}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className={styles.cardFooter}>
+                  <a href={project.live} className={styles.linkBtn} target="_blank" rel="noreferrer">
+                    <ExternalLink size={15} /> Live Demo
+                  </a>
+                  <a href={project.code} className={styles.linkBtn} target="_blank" rel="noreferrer">
+                    <Code size={15} /> Source Code
+                  </a>
                 </div>
               </div>
-              <div className={styles.cardFooter}>
-                <a href={project.live} className={styles.linkBtn} target="_blank" rel="noreferrer">
-                  <ExternalLink size={15} /> Live Demo
-                </a>
-                <a href={project.code} className={styles.linkBtn} target="_blank" rel="noreferrer">
-                  <Code size={15} /> Source Code
-                </a>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

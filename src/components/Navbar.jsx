@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo}>YourName</a>
+        <a href="#" className={styles.logo}>Aavash Basnet </a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
           {links.map((link) => (
