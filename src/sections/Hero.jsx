@@ -36,17 +36,17 @@ export default function Hero() {
             <a href="#contact" className={styles.btnSecondary}>Contact Me</a>
           </div>
 
-          <div className={styles.socials}>
-            <a href="https://github.com/Aavash2004" target="_blank" rel="noreferrer">
-              <Code size={20} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <ExternalLink size={20} />
-            </a>
-            <a href="mailto:aavashbasnet.079@kathford.edu.np">
-              <Mail size={20} />
-            </a>
-          </div>
+       <div className={styles.socials}>
+  <a href="https://github.com/Aavash2004" target="_blank" rel="noreferrer">
+    <Code size={20} />
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <ExternalLink size={20} />
+  </a>
+  <a href="mailto:aavashbasnet.079@kathford.edu.np">
+    <Mail size={20} />
+  </a>
+</div>
         </div>
 
         <div className={styles.avatarWrap}>

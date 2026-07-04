@@ -282,4 +282,8 @@
     width: 240px;
     height: 240px;
   }
+  .socials a span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 }
