@@ -48,7 +48,7 @@ export default function Contact() {
                 <div className={styles.infoIcon}><Mail size={20} /></div>
                 <div>
                   <h4 className={styles.infoTitle}>Email</h4>
-                  <p className={styles.infoText}>you@email.com</p>
+                  <p className={styles.infoText}>basnetaavash7@email.com</p>
                 </div>
               </div>
               <div className={styles.infoCard}>
